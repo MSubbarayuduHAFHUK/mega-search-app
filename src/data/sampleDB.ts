@@ -30,9 +30,16 @@ export interface MegaSearchResult {
     resultType:'orders',
     isRecent:true
 }, {
-    displayHeading:'Product2',
-    displayDescription:'Product 2 details',
+    displayHeading:'Quote1',
+    displayDescription:'Quote 2 details',
     icon: 'https://raw.githubusercontent.com/MSubbarayuduHAFHUK/icons/main/products.PNG',
-    resultType:'products',
-    isRecent:false
-}];
+    resultType:'quotes',
+    isRecent:true
+},{
+    displayHeading:'Returns1',
+    displayDescription:'Return 2 details',
+    icon: 'https://raw.githubusercontent.com/MSubbarayuduHAFHUK/icons/main/products.PNG',
+    resultType:'returns',
+    isRecent:true
+}
+];
