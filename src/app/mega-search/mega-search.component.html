@@ -1,0 +1,92 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Search</mat-label>
+      <input type="text"
+             placeholder="Search by number or code - Orders, Returns, Invoices, Quotes and Products"
+             aria-label="Number"
+             matInput
+             [formControl]="myControl"
+             [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-tab-group animationDuration="0ms">
+          <mat-tab>
+            <ng-template mat-tab-label>
+             <mat-icon>saved_search</mat-icon>
+            </ng-template>
+            <mat-option *ngFor="let option of result| orders:'recent'" [value]="option.key">
+              <div>
+                <a>
+                    <b>{{option.key}}</b> | <small>{{option.value}}</small>
+                </a>
+              </div>     
+            </mat-option>
+          </mat-tab>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <img src="https://raw.githubusercontent.com/MSubbarayuduHAFHUK/icons/main/orders.PNG" height="20" width="20" class="mega-search-icons"/>
+              ORDERS
+            </ng-template>
+            <mat-option *ngFor="let option of result| orders:'orders'" [value]="option.key">
+              <div>
+                <a>
+                  <b>{{option.key}}</b> | <small>{{option.value}}</small>
+                </a>
+              </div>     
+            </mat-option>
+          </mat-tab>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <img src="https://raw.githubusercontent.com/MSubbarayuduHAFHUK/icons/main/returns.PNG" height="20" width="20" class="mega-search-icons"/>
+              RETURNS
+            </ng-template>
+            <mat-option *ngFor="let option of result| orders:'returns'" [value]="option.key">
+              <div>
+                <a>
+                  <b>{{option.key}}</b> | <small>{{option.value}}</small>
+                </a>
+              </div>     
+            </mat-option>
+          </mat-tab><mat-tab>
+            <ng-template mat-tab-label>
+              <img src="https://raw.githubusercontent.com/MSubbarayuduHAFHUK/icons/main/invoices.PNG" height="20" width="20" class="mega-search-icons"/>
+              INVOICES
+            </ng-template>
+            <mat-option *ngFor="let option of result| orders:'invoices'" [value]="option.key">
+              <div>
+                <a>
+                  <b>{{option.key}}</b> | <small>{{option.value}}</small>
+                </a>
+              </div>
+            </mat-option>
+          </mat-tab>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <img src="https://raw.githubusercontent.com/MSubbarayuduHAFHUK/icons/main/quotes.PNG" height="20" width="20" class="mega-search-icons"/>
+              QUOTES
+            </ng-template>
+            <mat-option *ngFor="let option of result| orders:'quotes'" [value]="option.key">
+              <div>
+                <a>
+                  <b>{{option.key}}</b> | <small>{{option.value}}</small>
+                </a>
+              </div>
+            </mat-option>
+          </mat-tab>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <img src="https://raw.githubusercontent.com/MSubbarayuduHAFHUK/icons/main/products.PNG" height="20" width="20" class="mega-search-icons"/>
+              PRODUCTS
+            </ng-template>
+            <mat-option *ngFor="let option of result| orders:'products'" [value]="option.key">
+              <div>
+                <a>
+                  <b>{{option.key}}</b> | <small>{{option.value}}</small>
+                </a>
+              </div>
+            </mat-option>
+          </mat-tab>
+        </mat-tab-group>            
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+

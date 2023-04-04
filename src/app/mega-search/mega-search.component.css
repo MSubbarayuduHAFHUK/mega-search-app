@@ -1,0 +1,26 @@
+.example-form {
+    width: 100% !important;
+  }
+  
+.example-full-width {
+  width: 100% !important;
+}
+
+.search-result-header{
+  color:rgb(223, 111, 111);
+  margin-left: 3%;
+}
+
+.mega-search-icons{
+  vertical-align: middle;
+}
+
+/* mat-option.mdc-list-item--selected {
+  background: red !important;
+} */
+
+.mat-pseudo-checkbox {
+  color:rgb(223, 111, 111) !important;
+}
+
+  
